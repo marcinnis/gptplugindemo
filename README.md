@@ -165,7 +165,11 @@ localhost:8000
 
 And that should be it.
 
-Enable your new plugin and test it. Example query:
+Enable your new plugin and test it.
+
+## Example
+
+Example query
 
 ```
 can you check yesterday's NBA scores?
