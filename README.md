@@ -168,8 +168,12 @@ And that should be it.
 Enable your new plugin and test it. Example query:
 
 ```
-localhost:8000
+can you check yesterday's NBA scores?
 ```
+
+Example answer:
+
+![NBA Scores](./NBA_Scores_Inquiry.png)
 
 ## Docs
 
