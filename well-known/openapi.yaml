@@ -1,0 +1,66 @@
+openapi: 3.0.2
+info:
+  title: Web URL Data API
+  description: A FastAPI to extract text data from a given web URL
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+paths:
+  /get_data_from_url:
+    post:
+      summary: Get Data from URL
+      operationId: get_data_from_url
+      description: Accepts a URL and returns the extracted text data from the web page
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProcessWebUrl"
+        required: true
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/URLResponse"
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    ProcessWebUrl:
+      title: ProcessWebUrl
+      type: object
+      properties:
+        url:
+          title: URL
+          type: string
+          format: uri
+          example: "https://example.com"
+      required:
+        - url
+    URLResponse:
+      title: URLResponse
+      type: object
+      properties:
+        data:
+          title: Data
+          type: string
+          description: Extracted text data from the provided URL
+    Error:
+      title: Error
+      type: object
+      properties:
+        code:
+          title: Error Code
+          type: integer
+        success:
+          title: Success
+          type: boolean
+        message:
+          title: Error Message
+          type: string

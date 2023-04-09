@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "web_url_data",
+  "name_for_human": "Web URL Data Plugin",
+  "description_for_model": "Plugin for extracting text data from a given web URL. Use it to retrieve textual content from any web page for analysis or processing. Just provide the URL of the web page and get the extracted text data.",
+  "description_for_human": "Extract text data from a web URL.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:8000/.well-known/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "http://localhost:8000/.well-known/logo.png",
+  "contact_email": "support@yourdomain.com",
+  "legal_info_url": "http://www.yourdomain.com/legal"
+}
